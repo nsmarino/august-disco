@@ -30,7 +30,7 @@ const Shader = (props) => {
 
   useFrame((state, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01
+      // meshRef.current.rotation.x = meshRef.current.rotation.y += 0.01
     }
     if (meshRef.current.material) {
       meshRef.current.material.uniforms.time.value +=
@@ -41,7 +41,7 @@ const Shader = (props) => {
   return (
     <mesh
       ref={meshRef}
-      scale={hovered ? 1.1 : 1}
+      scale={hovered ? 1.5 : 1}
       onClick={() => {
         router.push(`/box`)
       }}
