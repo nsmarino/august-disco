@@ -17,17 +17,99 @@ const SceneView = dynamic(() => import('@/components/canvas/SceneView/SceneView'
 //   ssr: false,
 // })
 
-
 // TEST DATA
-const dialogue={
-  test: "Hello world"
+const gameState = {
+  interactives: [
+    {
+      scene: {
+        model: {},
+        tooltips: [
+          {
+            text: "Tooltip",
+            skill: "Logic",
+            threshold: 1
+          },
+        ]
+      },
+      dialogue: {
+        feed: [
+          {
+            speaker: "Speaker",
+            text: "Text"
+          },
+        ],
+        options: [
+          {
+            text: "Option Text"
+          },
+        ]
+      }
+    }
+  ],
+  player: {
+    status: {
+      health: 5,
+      morale: 5,
+      experience: 0,
+    },
+    skills: [
+      {
+        name: "Logic",
+        attribute: "Intellect",
+        baseValue: 2,
+        bonusesFromItems: 0
+      },
+      {
+        name: "Volition",
+        attribute: "Psyche",
+        baseValue: 2,
+        bonusesFromItems: 0
+      },
+      {
+        name: "Endurance",
+        attribute: "Physique",
+        baseValue: 2,
+        bonusesFromItems: 0
+      },
+      {
+        name: "Hand/Eye Coordination",
+        attribute: "Motorics",
+        baseValue: 2,
+        bonusesFromItems: 0
+      },
+    ],
+    inventory: [
+      {
+        name: "Hat",
+        description: "Hat worn on the head",
+        slot: "Head",
+        effects: [
+          {
+            skill: "Logic",
+            value: 2,
+          },
+          {
+            skill: "Endurance",
+            value: -2,
+          },
+        ],
+        equipped: true,
+      },
+      {
+        name: "Helmet",
+        description: "Hat worn on the head",
+        slot: "Head",
+        effects: [
+          {
+            skill: "Volition",
+            value: 2,
+          }
+        ],
+        equipped: false,
+      },
+    ],
+  }
 }
-const skills={}
-const itemBonuses={}
-const attributes={}
-const inventory={}
-const health=5
-const morale=5
 
 
 // ARTICY CONNECTION
@@ -62,6 +144,7 @@ const Page = (props) => {
 // It will receive SAME PROPS as Page component (from getStaticProps, etc.)
 Page.r3f = (props) => (
   <>
+    <SceneView />
   </>
 )
 
