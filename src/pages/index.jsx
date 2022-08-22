@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic'
 import gameState from '@/helpers/gameState'
+import { useState } from 'react'
 
 // DOM imports:
 import DialogueView from '@/components/dom/DialogueView/DialogueView'
@@ -18,11 +19,10 @@ const SceneView = dynamic(() => import('@/components/canvas/SceneView/SceneView'
 
 // dom components goes here
 const Page = ({ gameState }) => {
-
   return (
     <>
       <DialogueView gameState={gameState} />
-      <InfoView gameState={gameState} />
+      <InfoView player={gameState.player} />
     </>
   )
 }

@@ -1,11 +1,14 @@
 import Interactive from "./Interactive";
 
-export default function SceneView({ }) {
+export default function SceneView({ interactives }) {
 
   return (
     <>
-      <Interactive />
-      <Interactive />
+      {interactives.map(interactive => 
+        <Interactive 
+          interactive={interactive} 
+        />
+      )}
     </>
   )
 }

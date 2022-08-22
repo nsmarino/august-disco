@@ -1,8 +1,10 @@
-export default function PlayerStatus({ }) {
+export default function PlayerStatus({ status }) {
 
   return (
     <div>
-      player status
+      <p>Health – {status.health}</p>
+      <p>Morale – {status.morale}</p>
+      <p>XP – {status.experience}</p>
     </div>
   )
 }

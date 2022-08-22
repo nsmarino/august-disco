@@ -1,8 +1,8 @@
-export default function PlayerOptions({ }) {
+export default function PlayerOptions({ options }) {
 
   return (
     <div>
-player options
+      {options.map(option=> <p>{option.text}</p>)}
     </div>
   )
 }

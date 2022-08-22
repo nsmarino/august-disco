@@ -1,8 +1,8 @@
-export default function ModalTrigger({ }) {
+export default function ModalTrigger({ trigger }) {
 
   return (
-    <div>
-      modal trigger
-    </div>
+    <button className="font-bold">
+      {trigger}
+    </button>
   )
 }

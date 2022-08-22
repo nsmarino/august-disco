@@ -12,42 +12,44 @@ const gameState = {
           },
         ]
       },
-      dialogue: {
-        feed: [
-          {
-            speaker: "Electrochemistry",
-            color: "blue",
-            text: "Well, hello. Someone seems to have found himself a bottle of *alcohol*. Here's where the *magic* happens.",
-            threshold: 0
-          },
-          {
-            speaker: "You",
-            color: "white",
-            text: "Look at the bottle.",
-            threshold: 0,
-          },
-          {
-            speaker: "Interfacing",
-            color: "yellow",
-            text: "Look at the bottle.",
-            threshold: 1,
-          },
-        ],
-        options: [
-          {
-            text: "Option Text",
-            isSkillCheck: false,
-            isEndDialogue: false,
-          },
-          {
-            text: "Option Text",
-            isSkillCheck: true,
-            isEndDialogue: false,
-            skillType: "Suggestion",
-            threshold: 12,
-          },
-        ]
-      }
+      dialogues: [
+        {
+          feed: [
+            {
+              speaker: "Electrochemistry",
+              color: "blue",
+              text: "Well, hello. Someone seems to have found himself a bottle of *alcohol*. Here's where the *magic* happens.",
+              threshold: 0
+            },
+            {
+              speaker: "You",
+              color: "white",
+              text: "Look at the bottle.",
+              threshold: 0,
+            },
+            {
+              speaker: "Interfacing",
+              color: "yellow",
+              text: "Wow, the gods of mass production have made this alcohol container *laughably* easy to open. A child could have done it.",
+              threshold: 1,
+            },
+          ],
+          options: [
+            {
+              text: "Open the bottle.",
+              isSkillCheck: false,
+              isEndDialogue: false,
+            },
+            {
+              text: "No. No. I'm not doing it.",
+              isSkillCheck: true,
+              isEndDialogue: false,
+              skillType: "Suggestion",
+              threshold: 12,
+            },
+          ]
+        }
+      ]
     }
   ],
   player: {

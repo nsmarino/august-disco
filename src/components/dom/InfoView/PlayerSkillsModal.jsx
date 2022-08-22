@@ -1,8 +1,14 @@
-export default function PlayerSkillsModal({ }) {
+import ModalTrigger from "./ModalTrigger";
+
+export default function PlayerSkillsModal({ player }) {
 
   return (
     <div>
-      player skills
+      <ModalTrigger trigger="Skills" />
+      <div>
+        {player.skills.map(skill=><p>{skill.name} – {skill.baseValue}</p>)}
+      </div>
+      
     </div>
   )
 }
