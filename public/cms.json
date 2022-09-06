@@ -7,12 +7,25 @@
     "ExportVersion": "1.0"
   },
   "Project": {
-    "Name": "cms",
+    "Name": "simple",
     "DetailName": "",
-    "Guid": "fbac8248-47d5-4781-8a20-de03b2e9e026",
-    "TechnicalName": "Cms"
+    "Guid": "6de7519b-5e58-4237-83a5-1965ea099cf4",
+    "TechnicalName": "Simple"
   },
-  "GlobalVariables": [],
+  "GlobalVariables": [
+    {
+      "Namespace": "myVariables",
+      "Description": "",
+      "Variables": [
+        {
+          "Variable": "cool1",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        }
+      ]
+    }
+  ],
   "ObjectDefinitions": [
     {
       "Type": "Point",
@@ -388,36 +401,12 @@
           "Type": "string"
         },
         {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -444,6 +433,129 @@
       ]
     },
     {
+      "Type": "TestFlowFragment",
+      "Class": "FlowFragment",
+      "InheritsFrom": "FlowFragment",
+      "Template": {
+        "TechnicalName": "TestFlowFragment",
+        "DisplayName": "TestFlowFragment",
+        "Features": [
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Basic Character Properties",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Age"
+              },
+              {
+                "Property": "Species",
+                "Type": "string",
+                "DisplayName": "Species"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "string",
+                "DisplayName": "Born in"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Sex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "string",
+                "DisplayName": "Profession"
+              },
+              {
+                "Property": "Accent",
+                "Type": "string",
+                "DisplayName": "Voice"
+              },
+              {
+                "Property": "Personality",
+                "Type": "string",
+                "DisplayName": "Personality"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "string",
+                "DisplayName": "Appearance"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "Type": "Dialogue",
       "Class": "Dialogue",
       "DisplayName": "Dialogue",
@@ -458,36 +570,12 @@
           "Type": "string"
         },
         {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -531,32 +619,12 @@
           "Type": "Id"
         },
         {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -592,32 +660,12 @@
           "Type": "string"
         },
         {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -704,32 +752,12 @@
       "DisplayName": "Jump",
       "Properties": [
         {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -769,17 +797,8 @@
       "DisplayName": "Entity",
       "Properties": [
         {
-          "Property": "Attachments",
-          "Type": "Array",
-          "ItemType": "Id"
-        },
-        {
           "Property": "DisplayName",
           "Type": "string"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
         },
         {
           "Property": "Text",
@@ -788,26 +807,6 @@
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -1156,560 +1155,6 @@
       }
     },
     {
-      "Type": "testEntity",
-      "Class": "Entity",
-      "InheritsFrom": "Entity",
-      "Template": {
-        "TechnicalName": "testEntity",
-        "DisplayName": "testEntity",
-        "Features": [
-          {
-            "TechnicalName": "testFeature",
-            "DisplayName": "testFeature",
-            "Properties": [
-              {
-                "Property": "NumberValue",
-                "Type": "Float",
-                "DisplayName": "Number"
-              },
-              {
-                "Property": "BooleanValue",
-                "Type": "Bool",
-                "DisplayName": "Boolean"
-              },
-              {
-                "Property": "SmallTextValue",
-                "Type": "string",
-                "DisplayName": "Text (small)"
-              }
-            ],
-            "Constraints": [
-              {
-                "Property": "NumberValue",
-                "Type": "Number",
-                "MinValue": "-3.40282346638529E+38",
-                "MaxValue": "3.40282346638529E+38",
-                "Precision": "0",
-                "MinPrecision": "0",
-                "MaxPrecision": "0",
-                "Unit": null
-              },
-              {
-                "Property": "BooleanValue",
-                "Type": "Boolean",
-                "DisplayAsCombobox": "False"
-              },
-              {
-                "Property": "SmallTextValue",
-                "Type": "Text",
-                "MaxLength": "2048",
-                "PlaceholderValue": "",
-                "IsLocalized": "False",
-                "AllowsLinebreaks": "False"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Type": "Location",
-      "Class": "Location",
-      "DisplayName": "Location",
-      "Properties": [
-        {
-          "Property": "Attachments",
-          "Type": "Array",
-          "ItemType": "Id"
-        },
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "Spot",
-      "Class": "Spot",
-      "DisplayName": "Spot",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "ShowDisplayName",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "DisplayNameColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "DisplayNameSize",
-          "Type": "int"
-        },
-        {
-          "Property": "OutlineColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "OutlineSize",
-          "Type": "Float"
-        },
-        {
-          "Property": "OutlineStyle",
-          "Type": "OutlineStyle"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "Zone",
-      "Class": "Zone",
-      "DisplayName": "Zone",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Vertices",
-          "Type": "Array",
-          "ItemType": "Point"
-        },
-        {
-          "Property": "Transform",
-          "Type": "Transformation"
-        },
-        {
-          "Property": "ShapeType",
-          "Type": "ShapeType"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "OutlineColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "OutlineSize",
-          "Type": "Float"
-        },
-        {
-          "Property": "OutlineStyle",
-          "Type": "OutlineStyle"
-        },
-        {
-          "Property": "ShowDisplayName",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "DisplayNameColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "DisplayNameSize",
-          "Type": "int"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "Path",
-      "Class": "Path",
-      "DisplayName": "Path",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Vertices",
-          "Type": "Array",
-          "ItemType": "Point"
-        },
-        {
-          "Property": "Transform",
-          "Type": "Transformation"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "ShowDisplayName",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "DisplayNameColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "DisplayNameSize",
-          "Type": "int"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "OutlineColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "OutlineSize",
-          "Type": "Float"
-        },
-        {
-          "Property": "OutlineStyle",
-          "Type": "OutlineStyle"
-        },
-        {
-          "Property": "StartCap",
-          "Type": "PathCaps"
-        },
-        {
-          "Property": "EndCap",
-          "Type": "PathCaps"
-        },
-        {
-          "Property": "LineWidth",
-          "Type": "Float"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "Link",
-      "Class": "Link",
-      "DisplayName": "Link",
-      "Properties": [
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "Target",
-          "Type": "Id"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "ShowDisplayName",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "DisplayNameColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "DisplayNameSize",
-          "Type": "int"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "Asset",
-      "Class": "Asset",
-      "DisplayName": "Asset",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "Filename",
-          "Type": "string"
-        },
-        {
-          "Property": "OriginalSource",
-          "Type": "string"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
       "Type": "Condition",
       "Class": "Condition",
       "DisplayName": "Condition",
@@ -1727,28 +1172,8 @@
           "Type": "string"
         },
         {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
           "Property": "Expression",
           "Type": "Script_Condition"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
         },
         {
           "Property": "Id",
@@ -1792,28 +1217,8 @@
           "Type": "string"
         },
         {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
           "Property": "Expression",
           "Type": "Script_Instruction"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
         },
         {
           "Property": "Id",
@@ -1840,232 +1245,6 @@
       ]
     },
     {
-      "Type": "LocationText",
-      "Class": "LocationText",
-      "DisplayName": "LocationText",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "String"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Anchors",
-          "Type": "Array",
-          "ItemType": "LocationAnchor"
-        },
-        {
-          "Property": "Vertices",
-          "Type": "Array",
-          "ItemType": "Point"
-        },
-        {
-          "Property": "Transform",
-          "Type": "Transformation"
-        },
-        {
-          "Property": "ShapeType",
-          "Type": "ShapeType"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "OutlineColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "OutlineSize",
-          "Type": "Float"
-        },
-        {
-          "Property": "OutlineStyle",
-          "Type": "OutlineStyle"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "ForcedWidth",
-          "Type": "Float"
-        },
-        {
-          "Property": "ForcedHeight",
-          "Type": "Float"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "LocationImage",
-      "Class": "LocationImage",
-      "DisplayName": "LocationImage",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "PreviewImage",
-          "Type": "PreviewImage"
-        },
-        {
-          "Property": "Anchors",
-          "Type": "Array",
-          "ItemType": "LocationAnchor"
-        },
-        {
-          "Property": "Vertices",
-          "Type": "Array",
-          "ItemType": "Point"
-        },
-        {
-          "Property": "Transform",
-          "Type": "Transformation"
-        },
-        {
-          "Property": "ShapeType",
-          "Type": "ShapeType"
-        },
-        {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
-          "Property": "Text",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Visibility",
-          "Type": "VisibilityModes"
-        },
-        {
-          "Property": "OutlineColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "OutlineSize",
-          "Type": "Float"
-        },
-        {
-          "Property": "OutlineStyle",
-          "Type": "OutlineStyle"
-        },
-        {
-          "Property": "Selectability",
-          "Type": "SelectabilityModes"
-        },
-        {
-          "Property": "DropShadow",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "ClipRect",
-          "Type": "Rect"
-        },
-        {
-          "Property": "ImageOpacity",
-          "Type": "Float"
-        },
-        {
-          "Property": "ImageAsset",
-          "Type": "Id"
-        },
-        {
-          "Property": "CachedImageWidth",
-          "Type": "int"
-        },
-        {
-          "Property": "CachedImageHeight",
-          "Type": "int"
-        },
-        {
-          "Property": "ShowDisplayName",
-          "Type": "Boolean"
-        },
-        {
-          "Property": "DisplayNameColor",
-          "Type": "Color"
-        },
-        {
-          "Property": "DisplayNameSize",
-          "Type": "int"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        }
-      ]
-    },
-    {
       "Type": "Document",
       "Class": "Document",
       "DisplayName": "Document",
@@ -2075,32 +1254,12 @@
           "Type": "string"
         },
         {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
         {
           "Property": "ExternalId",
           "Type": "string"
-        },
-        {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
         },
         {
           "Property": "Id",
@@ -2135,10 +1294,6 @@
           "Type": "PreviewImage"
         },
         {
-          "Property": "Color",
-          "Type": "Color"
-        },
-        {
           "Property": "Text",
           "Type": "string"
         },
@@ -2147,22 +1302,6 @@
           "Type": "string"
         },
         {
-          "Property": "Position",
-          "Type": "Point"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
-        },
-        {
-          "Property": "Size",
-          "Type": "Size"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
           "Property": "Id",
           "Type": "Id"
         },
@@ -2173,430 +1312,183 @@
         {
           "Property": "Parent",
           "Type": "Id"
-        }
-      ]
-    },
-    {
-      "Type": "UserFolder",
-      "Class": "UserFolder",
-      "DisplayName": "UserFolder",
-      "Properties": [
-        {
-          "Property": "DisplayName",
-          "Type": "string"
-        },
-        {
-          "Property": "ExternalId",
-          "Type": "string"
-        },
-        {
-          "Property": "ShortId",
-          "Type": "uint"
-        },
-        {
-          "Property": "Id",
-          "Type": "Id"
-        },
-        {
-          "Property": "TechnicalName",
-          "Type": "string"
-        },
-        {
-          "Property": "Parent",
-          "Type": "Id"
-        },
-        {
-          "Property": "ZIndex",
-          "Type": "Float"
         }
       ]
     }
   ],
   "Packages": [
     {
-      "Name": "All objects",
-      "Description": "Exports all objects & types of the project",
+      "Name": "Export package",
+      "Description": "",
       "IsDefaultPackage": true,
       "Models": [
         {
           "Type": "FlowFragment",
           "Properties": {
-            "TechnicalName": "FFr_333101AD",
+            "TechnicalName": "FFr_0947410C",
             "Id": "0x010000000000010F",
             "Parent": "0x0300000043CE43F7",
-            "Attachments": [],
-            "DisplayName": "testNode",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x0000000000000000"
-            },
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
+            "Attachments": [
+              "0x0100000000000115"
+            ],
+            "DisplayName": "Flow1",
             "Text": "",
             "ExternalId": "",
-            "Position": {
-              "x": 300.0,
-              "y": 250.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 275.0,
-              "h": 200.0
-            },
-            "ShortId": 858849709,
             "InputPins": [
               {
                 "Text": "",
-                "Id": "0x0100000000000112",
-                "Owner": "0x010000000000010F"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000000113",
-                "Owner": "0x010000000000010F"
+                "Id": "0x0100000000000249",
+                "Owner": "0x010000000000010F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000246",
+                    "Target": "0x0100000000000243"
+                  }
+                ]
               }
             ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_66C47C6F",
+            "Id": "0x0100000000000236",
+            "Parent": "0x010000000000010F",
+            "Attachments": [],
+            "DisplayName": "FLOW_NO_ENTITY",
+            "Text": "",
+            "ExternalId": ""
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_10923561",
+            "Id": "0x010000000000023C",
+            "Parent": "0x010000000000010F",
+            "Attachments": [
+              "0x0100000000000115"
+            ],
+            "DisplayName": "FLOW_W_ENTITY",
+            "Text": "",
+            "ExternalId": ""
           }
         },
         {
           "Type": "Dialogue",
           "Properties": {
-            "TechnicalName": "Dlg_B2303A23",
-            "Id": "0x010000000000011A",
+            "TechnicalName": "Dlg_4B04F5AC",
+            "Id": "0x0100000000000243",
             "Parent": "0x010000000000010F",
-            "Attachments": [
-              "0x010000000000013C"
-            ],
-            "DisplayName": "Untitled dialogue",
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x0000000000000000"
-            },
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "",
-            "ExternalId": "",
-            "Position": {
-              "x": 492.0,
-              "y": 325.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 291.0,
-              "h": 200.0
-            },
-            "ShortId": 2989505059,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000011D",
-                "Owner": "0x010000000000011A",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000000156",
-                    "Target": "0x0100000000000153"
-                  }
-                ]
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000011E",
-                "Owner": "0x010000000000011A"
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_DC4BCD14",
-            "Id": "0x0100000000000153",
-            "Parent": "0x010000000000011A",
-            "MenuText": "Menu text 1",
-            "StageDirections": "stage 1",
-            "Speaker": "0x010000000000013C",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "dialogue fragment 1",
-            "ExternalId": "",
-            "Position": {
-              "x": 350.0,
-              "y": 400.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 3695955220,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000000156",
-                "Owner": "0x0100000000000153"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000000157",
-                "Owner": "0x0100000000000153",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x010000000000015B",
-                    "Target": "0x0100000000000158"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_8DED6069",
-            "Id": "0x0100000000000158",
-            "Parent": "0x010000000000011A",
-            "MenuText": "Menu text 2",
-            "StageDirections": "stage 2",
-            "Speaker": "0x010000000000013C",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "dialogue fragment 2",
-            "ExternalId": "",
-            "Position": {
-              "x": 675.0,
-              "y": 400.0
-            },
-            "ZIndex": 1.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 2381144169,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000015B",
-                "Owner": "0x0100000000000158"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x010000000000015C",
-                "Owner": "0x0100000000000158",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x0100000000000160",
-                    "Target": "0x010000000000015D"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "DialogueFragment",
-          "Properties": {
-            "TechnicalName": "DFr_4C6143DB",
-            "Id": "0x010000000000015D",
-            "Parent": "0x010000000000011A",
-            "MenuText": "Menu text 3",
-            "StageDirections": "stage 3",
-            "Speaker": "0x010000000000013C",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
-            "Text": "dialogue fragment 3",
-            "ExternalId": "",
-            "Position": {
-              "x": 1000.0,
-              "y": 400.0
-            },
-            "ZIndex": 2.0,
-            "Size": {
-              "w": 225.0,
-              "h": 200.0
-            },
-            "ShortId": 1281442779,
-            "InputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000000160",
-                "Owner": "0x010000000000015D"
-              }
-            ],
-            "OutputPins": [
-              {
-                "Text": "",
-                "Id": "0x0100000000000161",
-                "Owner": "0x010000000000015D",
-                "Connections": [
-                  {
-                    "Color": {
-                      "a": 1.0,
-                      "r": 0.5764706,
-                      "g": 0.75686276,
-                      "b": 0.8
-                    },
-                    "Label": "",
-                    "TargetPin": "0x010000000000011E",
-                    "Target": "0x010000000000011A"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "Type": "testEntity",
-          "Properties": {
-            "TechnicalName": "Ntt_E8D712E2",
-            "Id": "0x010000000000013C",
-            "Parent": "0x03000000AC61A2B3",
             "Attachments": [],
-            "DisplayName": "testEntity",
-            "Color": {
-              "r": 0.5764706,
-              "g": 0.75686276,
-              "b": 0.8
-            },
+            "DisplayName": "Untitled dialogue (04)",
             "Text": "",
             "ExternalId": "",
-            "Position": {
-              "x": 0.0,
-              "y": 0.0
-            },
-            "ZIndex": 0.0,
-            "Size": {
-              "w": 256.0,
-              "h": 196.0
-            },
-            "PreviewImage": {
-              "ViewBox": {
-                "x": 0.0,
-                "y": 0.0,
-                "w": 0.0,
-                "h": 0.0
-              },
-              "Mode": "FromAsset",
-              "Asset": "0x0000000000000000"
-            },
-            "ShortId": 3906409186
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000246",
+                "Owner": "0x0100000000000243",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000024D",
+                    "Target": "0x010000000000024B"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000247",
+                "Owner": "0x0100000000000243"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Instruction",
+          "Properties": {
+            "TechnicalName": "Ins_9A355BB4",
+            "Id": "0x010000000000024B",
+            "Parent": "0x0100000000000243",
+            "DisplayName": "myVariables.cool1 = true",
+            "Text": "",
+            "ExternalId": "",
+            "Expression": "myVariables.cool1 = true",
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000024D",
+                "Owner": "0x010000000000024B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000024E",
+                "Owner": "0x010000000000024B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000247",
+                    "Target": "0x0100000000000243"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DefaultMainCharacterTemplate",
+          "Properties": {
+            "TechnicalName": "Ntt_26BB2A20",
+            "Id": "0x0100000000000115",
+            "Parent": "0x03000000AC61A2B3",
+            "DisplayName": "Mr.Cool",
+            "Text": "",
+            "ExternalId": "MrCool"
           },
           "Template": {
-            "testFeature": {
-              "NumberValue": null,
-              "BooleanValue": null,
-              "SmallTextValue": ""
+            "DefaultExtendedCharacterFeature": {
+              "Motivation": "",
+              "InnerConflict": "",
+              "Skills": "",
+              "Fears": "",
+              "Habits": "",
+              "FurtherDetails": ""
+            },
+            "DefaultBasicCharacterFeature": {
+              "Age": 45.0,
+              "Species": "Human",
+              "BornIn": "1941",
+              "Sex": null,
+              "Occupation": "",
+              "Accent": "",
+              "Personality": "",
+              "Appearance": ""
             }
-          }
-        },
-        {
-          "Type": "UserFolder",
-          "Properties": {
-            "TechnicalName": "Ufo_8DE16CAE",
-            "Id": "0x0100000000000105",
-            "Parent": "0x030000004C3DAF54",
-            "DisplayName": "Images",
-            "ExternalId": "",
-            "ShortId": 2380360878
-          }
-        },
-        {
-          "Type": "UserFolder",
-          "Properties": {
-            "TechnicalName": "Ufo_4EFF3694",
-            "Id": "0x0100000000000107",
-            "Parent": "0x030000004C3DAF54",
-            "DisplayName": "Videos",
-            "ExternalId": "",
-            "ShortId": 1325348500
-          }
-        },
-        {
-          "Type": "UserFolder",
-          "Properties": {
-            "TechnicalName": "Ufo_EC09CFB6",
-            "Id": "0x0100000000000109",
-            "Parent": "0x030000004C3DAF54",
-            "DisplayName": "Audio",
-            "ExternalId": "",
-            "ShortId": 3960065974
-          }
-        },
-        {
-          "Type": "UserFolder",
-          "Properties": {
-            "TechnicalName": "Ufo_9D25D133",
-            "Id": "0x010000000000010B",
-            "Parent": "0x030000004C3DAF54",
-            "DisplayName": "Documents",
-            "ExternalId": "",
-            "ShortId": 2636501299
-          }
-        },
-        {
-          "Type": "UserFolder",
-          "Properties": {
-            "TechnicalName": "Ufo_C52B84AD",
-            "Id": "0x010000000000010D",
-            "Parent": "0x030000004C3DAF54",
-            "DisplayName": "Miscellaneous",
-            "ExternalId": "",
-            "ShortId": 3307963565
           }
         }
       ]
@@ -2605,7 +1497,7 @@
   "ScriptMethods": [],
   "Hierarchy": {
     "Id": "0x0100000000000001",
-    "TechnicalName": "Cms",
+    "TechnicalName": "Simple",
     "Type": "Project",
     "Children": [
       {
@@ -2638,7 +1530,14 @@
       {
         "Id": "0x030000002B4F4C54",
         "TechnicalName": "GlobalVariables",
-        "Type": "GlobalVariables"
+        "Type": "GlobalVariables",
+        "Children": [
+          {
+            "Id": "0x0100000000000241",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          }
+        ]
       },
       {
         "Id": "0x0300000043CE43F7",
@@ -2647,30 +1546,30 @@
         "Children": [
           {
             "Id": "0x010000000000010F",
-            "TechnicalName": "FFr_333101AD",
+            "TechnicalName": "FFr_0947410C",
             "Type": "FlowFragment",
             "Children": [
               {
-                "Id": "0x010000000000011A",
-                "TechnicalName": "Dlg_B2303A23",
+                "Id": "0x010000000000023C",
+                "TechnicalName": "FFr_10923561",
+                "Type": "FlowFragment"
+              },
+              {
+                "Id": "0x0100000000000243",
+                "TechnicalName": "Dlg_4B04F5AC",
                 "Type": "Dialogue",
                 "Children": [
                   {
-                    "Id": "0x0100000000000153",
-                    "TechnicalName": "DFr_DC4BCD14",
-                    "Type": "DialogueFragment"
-                  },
-                  {
-                    "Id": "0x0100000000000158",
-                    "TechnicalName": "DFr_8DED6069",
-                    "Type": "DialogueFragment"
-                  },
-                  {
-                    "Id": "0x010000000000015D",
-                    "TechnicalName": "DFr_4C6143DB",
-                    "Type": "DialogueFragment"
+                    "Id": "0x010000000000024B",
+                    "TechnicalName": "Ins_9A355BB4",
+                    "Type": "Instruction"
                   }
                 ]
+              },
+              {
+                "Id": "0x0100000000000236",
+                "TechnicalName": "FFr_66C47C6F",
+                "Type": "FlowFragment"
               }
             ]
           }
@@ -2682,8 +1581,8 @@
         "Type": "Entities",
         "Children": [
           {
-            "Id": "0x010000000000013C",
-            "TechnicalName": "Ntt_E8D712E2",
+            "Id": "0x0100000000000115",
+            "TechnicalName": "Ntt_26BB2A20",
             "Type": "Entity"
           }
         ]
@@ -2721,11 +1620,6 @@
               {
                 "Id": "0x0100000000000043",
                 "TechnicalName": "DefaultExtendedCharacterFeature",
-                "Type": "Feature"
-              },
-              {
-                "Id": "0x0100000000000124",
-                "TechnicalName": "testFeature",
                 "Type": "Feature"
               }
             ]
@@ -2811,18 +1705,20 @@
                     "Id": "0x010000000000006B",
                     "TechnicalName": "DefaultSupportingCharacterTemplate",
                     "Type": "Template"
-                  },
-                  {
-                    "Id": "0x0100000000000120",
-                    "TechnicalName": "testEntity",
-                    "Type": "Template"
                   }
                 ]
               },
               {
                 "Id": "0x030000006D1BC275",
                 "TechnicalName": "",
-                "Type": "TemplateTypeFolder"
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x0100000000000122",
+                    "TechnicalName": "TestFlowFragment",
+                    "Type": "Template"
+                  }
+                ]
               },
               {
                 "Id": "0x0300000013DF3A1A",
@@ -2889,12 +1785,12 @@
         "Type": "RuleSets",
         "Children": [
           {
-            "Id": "0x01000000000000FF",
+            "Id": "0x01000000000001A7",
             "TechnicalName": "",
             "Type": "RuleSet",
             "Children": [
               {
-                "Id": "0x0100000000000102",
+                "Id": "0x01000000000001AA",
                 "TechnicalName": "",
                 "Type": "RuleSetPackage"
               }
@@ -2909,27 +1805,27 @@
         "Children": [
           {
             "Id": "0x0100000000000109",
-            "TechnicalName": "Ufo_EC09CFB6",
+            "TechnicalName": "Ufo_470F28FD",
             "Type": "AssetsUserFolder"
           },
           {
             "Id": "0x010000000000010B",
-            "TechnicalName": "Ufo_9D25D133",
+            "TechnicalName": "Ufo_316D8127",
             "Type": "AssetsUserFolder"
           },
           {
             "Id": "0x0100000000000105",
-            "TechnicalName": "Ufo_8DE16CAE",
+            "TechnicalName": "Ufo_CAB48A73",
             "Type": "AssetsUserFolder"
           },
           {
             "Id": "0x010000000000010D",
-            "TechnicalName": "Ufo_C52B84AD",
+            "TechnicalName": "Ufo_5FB89112",
             "Type": "AssetsUserFolder"
           },
           {
             "Id": "0x0100000000000107",
-            "TechnicalName": "Ufo_4EFF3694",
+            "TechnicalName": "Ufo_5BB6FC4F",
             "Type": "AssetsUserFolder"
           }
         ]

@@ -1,17 +1,26 @@
 import create from 'zustand'
 import { shallow } from 'zustand/shallow'
 
-const useStoreImpl = create(() => {
-  return {
-    router: null,
-    dom: null,
-  }
-})
+const useStore = create((set) => ({
+  pan: true,
+  togglePan: () => set((state) => ({ pan: !state.pan })),
+  dom: null,
+  setDom: (dom) => set((state) => ({ dom })),
+  entity: null,
+  setEntity: (entity) => set((state) => ({ entity })),
+}))
 
-const useStore = (sel) => useStoreImpl(sel, shallow)
-Object.assign(useStore, useStoreImpl)
+// const useStoreImpl = create((set) => {
+//   return {
+//     router: null,
+//     dom: null,
+//   }
+// })
 
-const { getState, setState } = useStoreImpl
+// const useStore = (sel) => useStoreImpl(sel, shallow)
+// Object.assign(useStore, useStoreImpl)
 
-export { getState, setState }
+// const { getState, setState } = useStoreImpl
+
+// export { getState, setState, usePanStore }
 export default useStore

@@ -1,10 +1,12 @@
-import { setState } from '@/helpers/store'
 import { useEffect, useRef } from 'react'
+import useStore from '@/helpers/store'
 
 const Dom = ({ children }) => {
   const ref = useRef(null)
+  const setDom = useStore((state) => state.setDom)
+
   useEffect(() => {
-    setState({ dom: ref })
+    setDom(ref)
   }, [])
 
   return (

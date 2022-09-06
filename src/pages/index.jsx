@@ -5,6 +5,7 @@ import { useState } from 'react'
 // DOM imports:
 import DialogueView from '@/components/dom/DialogueView/DialogueView'
 import InfoView from '@/components/dom/InfoView/InfoView'
+import Scene from '@/simpleScene'
 
 // Canvas imports:
 const SceneView = dynamic(() => import('@/components/canvas/SceneView/SceneView'), {
@@ -22,7 +23,7 @@ const Page = ({ gameState }) => {
   return (
     <>
       <DialogueView gameState={gameState} />
-      <InfoView player={gameState.player} />
+      {/* <InfoView player={gameState.player} /> */}
     </>
   )
 }
@@ -33,9 +34,10 @@ Page.r3f = ({ gameState }) => {
 
   return (
   <>
-    <SceneView
+    <Scene />
+    {/* <SceneView
       interactives={gameState.interactives}
-    />
+    /> */}
   </>
 )}
 

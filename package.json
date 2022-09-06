@@ -23,6 +23,8 @@
     "@babel/plugin-transform-runtime": "^7.17.0",
     "@react-three/drei": "^9.14.3",
     "@react-three/fiber": "^8.0.27",
+    "@splinetool/loader": "^0.9.105",
+    "@splinetool/r3f-spline": "^1.0.2",
     "articy-js": "^1.2.2",
     "articy-js-react": "^0.3.1",
     "babel-plugin-glsl": "^1.0.0",

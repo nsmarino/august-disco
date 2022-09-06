@@ -3,6 +3,7 @@ import { OrbitControls, Preload } from '@react-three/drei'
 import useStore from '@/helpers/store'
 import { useEffect, useRef } from 'react'
 
+// Camera control here
 const LControl = () => {
   const dom = useStore((state) => state.dom)
   const control = useRef(null)
@@ -18,6 +19,7 @@ const LControl = () => {
       }
     }
   }, [dom, control])
+  
   // @ts-ignore
   return <OrbitControls ref={control} domElement={dom.current} />
 }
@@ -30,10 +32,10 @@ const LCanvas = ({ children }) => {
       style={{
         position: 'absolute',
         top: 0,
+        border: "5px solid dodgerblue"
       }}
       onCreated={(state) => state.events.connect(dom.current)}
     >
-      <LControl />
       <Preload all />
       {children}
     </Canvas>
