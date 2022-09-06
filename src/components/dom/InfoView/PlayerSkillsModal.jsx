@@ -6,7 +6,7 @@ export default function PlayerSkillsModal({ player }) {
     <div>
       <ModalTrigger trigger="Skills" />
       <div>
-        {player.skills.map(skill=><p>{skill.name} – {skill.baseValue}</p>)}
+        {/* {player.skills.map(skill=><p>{skill.name} – {skill.baseValue}</p>)} */}
       </div>
       
     </div>

@@ -11,7 +11,7 @@ export default function PlayerInventoryModal({ player }) {
             <h2>{item.name} — {item.slot}</h2>
             <p>{item.description}</p>
             <ul>
-             {item.effects.map(effect=> <li>{effect.skill} — {effect.value}</li>)}   
+             {/* {item.effects.map(effect=> <li>{effect.skill} — {effect.value}</li>)}    */}
             </ul>
           </div>
         )}
